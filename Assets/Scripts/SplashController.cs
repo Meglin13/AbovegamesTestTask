@@ -15,6 +15,8 @@ public class SplashController : MonoBehaviour
         logo.alpha = 0;
         mainMenu.alpha = 0;
 
+        mainMenu.gameObject.SetActive(false);
+
         logo.DOFade(1f, logoFadeDuration)
             .OnComplete(() =>
             {
@@ -26,5 +28,6 @@ public class SplashController : MonoBehaviour
     {
         logo.DOFade(0f, 0.5f);
         mainMenu.DOFade(1f, menuFadeDuration);
+        mainMenu.gameObject.SetActive(true);
     }
 }
