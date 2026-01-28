@@ -78,8 +78,8 @@ public class GalleryItem : MonoBehaviour
     public void OnClick()
     {
         if (isPremium)
-            Debug.Log("Open Premium Popup");
+            UIManager.Instance.OpenPremium();
         else
-            Debug.Log("Open Image Popup " + Index);
+            UIManager.Instance.OpenImage(picture.sprite);
     }
 }
